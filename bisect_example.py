@@ -1,6 +1,6 @@
 def calculate():
     a = 20
-    b = 5
+    b = 0
     return a / b
 
 print("Результат:", calculate())
