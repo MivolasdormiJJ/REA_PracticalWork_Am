@@ -8,3 +8,4 @@ print("Результат:", calculate())
 # Change 2
 # Change 3
 # Change 4
+# Change 6
