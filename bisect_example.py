@@ -5,3 +5,4 @@ def calculate():
 
 print("Результат:", calculate())
 # Change 1
+# Change 2
