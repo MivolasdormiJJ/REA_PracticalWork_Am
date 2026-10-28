@@ -4,3 +4,4 @@ def calculate():
     return a / b
 
 print("Результат:", calculate())
+# Change 1
