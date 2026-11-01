@@ -1,5 +1,5 @@
 
-from utils import read_text, write_text
+from utils import read_text, write_text, append_text
 def test_write_text(tmp_path):
     file_path = tmp_path / "test.txt"
     write_text(file_path, "Hello GitHub!")
@@ -25,4 +25,16 @@ def test_overwrite_file(tmp_path):
     file_path = tmp_path / "test.txt"
     write_text(file_path, "Old text")
     write_text(file_path, "New text")
+    assert read_text(file_path) == "New text"
+    
+#тесты для новой функции
+def test_append_text(tmp_path):
+    file_path = tmp_path / "append.txt"
+    write_text(file_path, "Hello")
+    append_text(file_path, " World")
+    assert read_text(file_path) == "Hello World"
+
+def test_append_to_empty_file(tmp_path):
+    file_path = tmp_path / "empty_append.txt"
+    append_text(file_path, "New text")
     assert read_text(file_path) == "New text"
