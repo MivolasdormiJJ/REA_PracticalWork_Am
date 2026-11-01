@@ -28,6 +28,7 @@ def test_overwrite_file(tmp_path):
     assert read_text(file_path) == "New text"
     
 #тесты для новой функции
+
 def test_append_text(tmp_path):
     file_path = tmp_path / "append.txt"
     write_text(file_path, "Hello")
