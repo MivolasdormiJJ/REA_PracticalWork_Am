@@ -1,0 +1,8 @@
+site_name: REA Practical Work
+site_description: Документация
+site_url: https://mivolasdormijj.github.io/REA_PracticalWork_Am/
+theme:
+  name: mkdocs
+nav:
+  - Главная: index.md
+  - Функции проекта: api.md
