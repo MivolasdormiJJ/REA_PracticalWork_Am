@@ -31,3 +31,10 @@ jobs:
         run: |
           cd person1
           python -c "from utils import read_text, write_text; import tempfile, os; f = tempfile.NamedTemporaryFile(delete=False); p = f.name; f.close(); write_text(p, 'Hello CI'); assert read_text(p) == 'Hello CI'; os.unlink(p); print('Test passed!')"
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: |
+          cd person1
+          python -m pytest test_utils.py -v
