@@ -38,5 +38,3 @@ def test_append_to_empty_file(tmp_path):
     file_path = tmp_path / "empty_append.txt"
     append_text(file_path, "New text")
     assert read_text(file_path) == "New text"
-
-
