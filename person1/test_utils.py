@@ -19,7 +19,7 @@ def test_empty_file(tmp_path):
 def test_unicode_text(tmp_path):
     file_path = tmp_path / "unicode.txt"
     write_text(file_path, "Привет, мир!")
-    assert read_text(file_path) == "Привет"
+    assert read_text(file_path) == "Привет, мир!"
 
 def test_overwrite_file(tmp_path):
     file_path = tmp_path / "test.txt"
